@@ -11,7 +11,7 @@ const Sign_Up = () => {
     const [showerr, setShowerr] = useState('');
 
     const navigate = useNavigate();
-    
+
     const register = async (e) => {
         e.preventDefault();
         // API Call
@@ -28,7 +28,7 @@ const Sign_Up = () => {
                 phone: phone,
             }),
         });
-        console.log("res",response);
+
         const json = await response.json();
         if (json.authtoken) {
             sessionStorage.setItem("auth-token", json.authtoken);
@@ -70,7 +70,7 @@ const Sign_Up = () => {
                             <div className="form-group">
                                 <label htmlFor="name">Name</label>
                                 <input
-                                    value={name} 
+                                    value={name}
                                     onChange={(e) => setName(e.target.value)}
                                     type="text"
                                     name="name"
@@ -85,7 +85,7 @@ const Sign_Up = () => {
                             <div className="form-group">
                                 <label htmlFor="phone">Phone</label>
                                 <input
-                                    value={phone} 
+                                    value={phone}
                                     onChange={(e) => setPhone(e.target.value)}
                                     type="tel"
                                     name="phone"
@@ -100,7 +100,7 @@ const Sign_Up = () => {
                             <div className="form-group">
                                 <label htmlFor="email">Email</label>
                                 <input
-                                    value={email} 
+                                    value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                     type="email"
                                     name="email"
@@ -115,7 +115,7 @@ const Sign_Up = () => {
                             <div className="form-group">
                                 <label htmlFor="password">Password</label>
                                 <input
-                                    value={password} 
+                                    value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     name="password"
                                     id="password"
