@@ -4,7 +4,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import FindDoctorSearchIC from './FindDoctorSearchIC/FindDoctorSearchIC';
 import DoctorCardIC from './DoctorCardIC/DoctorCardIC';
 
-const InstantConsultation = () => {if (searchParams.get('speciality')) {
+const InstantConsultation = () => {
     const [searchParams] = useSearchParams();
     const [doctors, setDoctors] = useState([]);
     const [filteredDoctors, setFilteredDoctors] = useState([]);
